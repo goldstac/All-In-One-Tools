@@ -41,10 +41,10 @@ void calculator() {
      scanf("%d",&second_number);
      int calculate;
      calculate = first_number / second_number;
-     printf("The Total Is %d %s %d = %d",first_number,op,second_number,calculate);  
+     printf("The Total Is %d %s %d = %d\n",first_number,op,second_number,calculate);  
     }
     else{
-        printf("Operator Not Found");
+        printf("Operator Not Found\n");
     }
 
 }
