@@ -6,7 +6,7 @@ set SOURCES=
 for %%f in (*.c) do set SOURCES=!SOURCES! %%f
 
 REM Compile with gcc
-gcc *.c -o my_program.exe
+gcc *.c -o main.exe
 
 IF %ERRORLEVEL% EQU 0 (
     echo Compilation successful! Output: my_program.exe
