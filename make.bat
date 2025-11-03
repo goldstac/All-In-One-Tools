@@ -9,7 +9,7 @@ REM Compile with gcc
 gcc *.c -o main.exe
 
 IF %ERRORLEVEL% EQU 0 (
-    echo Compilation successful! Output: my_program.exe
+   
 ) ELSE (
     echo Compilation failed.
 )
