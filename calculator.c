@@ -2,8 +2,12 @@
 #include <string.h>
 #include "addition-cpp.h"
 #include "subtract-cpp.h"
+#include "division-cpp.h"
+#include "multiply-cpp.h"
 void addition();
 void subtract();
+void division();
+void multiply();
 void calculator() {
     int first_number;
     int second_number;
@@ -12,13 +16,7 @@ void calculator() {
     fgets(op,sizeof(op),stdin);
     op[strlen(op)-1] = '\0';
     if (strcmp(op,"*") == 0) {
-     printf("Enter First Number\n ");
-     scanf("%d",&first_number);
-     printf("Enter Second Number\n");
-     scanf("%d",&second_number);
-     int calculate;
-     calculate = first_number * second_number;
-     printf("The Total Is %d %s %d = %d",first_number,op,second_number,calculate);  
+     multiply();
     }
     else if (strcmp(op,"+") == 0) {
      addition();
@@ -27,13 +25,7 @@ void calculator() {
      subtract();
     }
     else if (strcmp(op,"/") == 0) {
-     printf("Enter First Number \n");
-     scanf("%d",&first_number);
-     printf("Enter Second Number\n");
-     scanf("%d",&second_number);
-     int calculate;
-     calculate = first_number / second_number;
-     printf("The Total Is %d %s %d = %d\n",first_number,op,second_number,calculate);  
+     division();
     }
     else{
         printf("Operator Not Found\n");
