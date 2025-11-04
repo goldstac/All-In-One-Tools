@@ -4,6 +4,7 @@
 #include "calculator.h"
 #include "main-cpp.h"
 #include "help-cpp.h"
+#include "currency_converter.h"
 void hello_text();
 void help();
 int main() {
@@ -16,8 +17,11 @@ int main() {
     if (strcmp(main_input,"help") == 0) {
         help();
     }
-    if (strcmp(main_input,"calculate") == 0) {
+    else if (strcmp(main_input,"calculate") == 0) {
         calculator();
+    }
+    else if (strcmp(main_input,"currency convert") == 0) {
+        currency_convert();
     }
     }
 }
