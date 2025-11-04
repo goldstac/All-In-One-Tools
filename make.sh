@@ -1,21 +1,21 @@
 #!/bin/bash
-# Compile all .c files in the current folder into main executable
+# Compile all .c and .cpp files in the current folder into main
 
-# Find all .c files
-SOURCES=$(ls *.c 2>/dev/null)
+# Check if there are any C or C++ files
+shopt -s nullglob
+c_files=( *.c )
+cpp_files=( *.cpp )
 
-# Check if there are any .c files
-if [ -z "$SOURCES" ]; then
-  echo "No C source files found."
-  exit 1
+if [ ${#c_files[@]} -eq 0 ] && [ ${#cpp_files[@]} -eq 0 ]; then
+    echo "No C or C++ files found in the current directory."
+    exit 1
 fi
 
-# Compile with gcc
-gcc $SOURCES -o main
+# Compile all C and C++ files
+g++ *.c *.cpp -o main
 
-# Check if compilation succeeded
 if [ $? -eq 0 ]; then
-  echo "✅ Compilation successful! Run it with ./main"
+    echo "Compilation successful! Executable 'main' created."
 else
-  echo "❌ Compilation failed."
+    echo "Compilation failed."
 fi
