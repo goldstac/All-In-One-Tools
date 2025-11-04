@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include "addition-cpp.h"
+void addition();
 void calculator() {
     int first_number;
     int second_number;
@@ -17,13 +19,7 @@ void calculator() {
      printf("The Total Is %d %s %d = %d",first_number,op,second_number,calculate);  
     }
     else if (strcmp(op,"+") == 0) {
-     printf("Enter First Number\n ");
-     scanf("%d",&first_number);
-     printf("Enter Second Number\n");
-     scanf("%d",&second_number);
-     int calculate;
-     calculate = first_number + second_number;
-     printf("The Total Is %d %s %d = %d",first_number,op,second_number,calculate);  
+     addition();
     }
     else if (strcmp(op,"-") == 0) {
      printf("Enter First Number\n ");
